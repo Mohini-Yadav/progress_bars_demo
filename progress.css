@@ -1,0 +1,81 @@
+#barcontainer {
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  right: 0;
+  height: 75vh;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: #fff;
+}
+
+progress::-webkit-progress-value {
+  background: #0063a6;
+}
+
+progress {
+  height: 8vh;
+  border: 1px solid var(--dark);
+  overflow: hidden;
+  border-radius: 9px;
+  text-align: center;
+  background-color: green;
+  margin-left: 10vw;
+  margin-top: 10vw;;
+}
+
+input:hover {
+  background-color: #3e8e41;
+}
+
+label{
+  font-size: 20px;
+}
+select{
+  padding:2vh;
+  margin-left: 20px;
+  background-color: yellow;
+  border-radius: 9px;
+  font-size: 16px;
+
+}
+button{
+
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  padding: 2vh 5vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {background-color: #3e8e41}
+
+
+#progress-bar {
+  position: relative;
+  padding: 2vh;
+
+}
+
+:root {
+  --bright: #fff;
+  --dark: #000;
+}
+
+progress::before {
+  content: attr(value)'%';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark: #fff;
+    --bright: #000;
+  }
+}
